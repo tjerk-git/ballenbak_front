@@ -64,8 +64,8 @@ var SiteManager = {
             this.aPeople.push({ id: this.nCurrentPersonID, div: t, body: PhysicsManager.addPersonPhysicsObject(e) }),
                 console.log("this.myPeopleData[this.nCurrentPersonID]", this.myPeopleData[this.nCurrentPersonID], this.myPeopleData, this.nCurrentPersonID);
             var n = this.myPeopleData[this.nCurrentPersonID].email;
-            console.log(this.myPeopleData[this.nCurrentPersonID].image)
-            n && t.css({ backgroundImage: 'url("../heads/' + this.myPeopleData[this.nCurrentPersonID].image + '.jpeg' }),
+            t.css({ backgroundImage: 'url("../heads/' + this.myPeopleData[this.nCurrentPersonID].image + '.jpeg' })
+            n &&
                 SiteManager.mob ? t.on("touchstart", this.onPersonClicked.bind(this)) : t.on("mousedown", this.onPersonClicked.bind(this)),
                 this.nCurrentPersonID++,
                 this.nCurrentPersonID == this.myPeopleData.length && this.deActivateNewButton();
